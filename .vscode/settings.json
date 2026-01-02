@@ -1,0 +1,10 @@
+{
+  // Use Prettier for format commands (Shift+Option+F) instead of the built-in formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Keep formatting aligned with project Prettier config on save/format
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true
+}
