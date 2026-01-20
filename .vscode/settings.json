@@ -6,5 +6,17 @@
   },
   // Keep formatting aligned with project Prettier config on save/format
   "editor.formatOnSave": true,
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  // Use workspace TypeScript (node_modules) so decorators/paths match project config
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // Make ESLint in VS Code read the flat config + auto-detect workspace folders
+  "eslint.useFlatConfig": true,
+  "eslint.options": {
+    "overrideConfigFile": "eslint.config.mjs"
+  },
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  // Apply ESLint fixes on save alongside Prettier
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
 }
