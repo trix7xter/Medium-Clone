@@ -18,7 +18,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --dataSource src/ormconfig.ts",
     "db:drop": "yarn typeorm schema:drop",
-    "db:create": "yarn typeorm migration:generate",
+    "db:create": "sh -c 'yarn typeorm migration:generate src/migrations/migration-$(date +%s)'",
     "db:migrate": "yarn typeorm migration:run"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
+    "slugify": "^1.6.6",
     "typeorm": "^0.3.28"
   },
   "devDependencies": {
